@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Form Example</title>
+</head>
+<body>
+
+    <h2>User Registration Form</h2>
+
+    <?php
+    $fullname = "";
+    $course = "";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+       
+    
+    <form method="POST" action="<($_SERVER["PHP_SELF"]">
+
+        Full Name:
+        <input type="text" name="fullname" value="">
+        <br><br>
+
+        Course:
+        <input type="text" name="course" value="">
+        <br><br>
+
+        <input type="submit" value="Register">
+
+    </form>
+
+</body>
+</html>
