@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 14 - Checkbox Input</title>
+</head>
+<body>
+
+    <h2>Hobbies Form</h2>
+
+    <form method="POST" action="">
+
+        Name:
+        <input type="text" name="name">
+        <br><br>
+
+        Hobbies:
+        <br>
+
+        <input type="checkbox" name="hobbies[]" value="Reading"> Reading
+        <br>
+
+        <input type="checkbox" name="hobbies[]" value="Sports"> Sports
+        <br>
+
+        <input type="checkbox" name="hobbies[]" value="Music"> Music
+        <br>
+
+        <input type="checkbox" name="hobbies[]" value="Gaming"> Gaming
+        <br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <?php
+
+</body>
+</html>
