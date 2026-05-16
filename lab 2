@@ -1,24 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 2 - Using POST Method</title>
+</head>
 <body>
 
-<h2>Multiple Inputs Form</h2>
+    <h2>Using POST Method</h2>
 
-<form method="post" action="">
-    
-    Name: <input type="text" name="name"><br><br>
-    
-    Email: <input type="email" name="email"><br><br>
-    
-    <input type="submit" value="Submit">
-
-</form>
-
-<?php
-if(isset($_POST['name']) && isset($_POST['email'])) {
-
-    $name = $_POST['name'];
-    $email = $_POST['email'];
+    <form method="POST" action="">
+        Name:
+        <input type="text" name="name">
+        <input type="submit" value="Submit">
+    </form>
 
 
 </body>
