@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 18 - GET vs POST Comparison</title>
+</head>
+<body>
+
+    <h2>GET Method Form</h2>
+
+    <!-- Form using GET -->
+    <form action="" method="GET">
+        <label for="getname">Name:</label><br>
+        <input type="text" id="getname" name="name" required><br><br>
+
+        <input type="submit" value="Submit with GET">
+    </form>
+
+    <hr>
+
+    <h2>POST Method Form</h2>
+
+    <!-- Form using POST -->
+    <form action="" method="POST">
+        <label for="postname">Name:</label><br>
+        <input type="text" id="postname" name="name" required><br><br>
+
+        <input type="submit" value="Submit with POST">
+    </form>
+
+</body>
+</html>
