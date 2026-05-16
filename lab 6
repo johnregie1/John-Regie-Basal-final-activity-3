@@ -21,9 +21,11 @@
         $email = $_POST["email"];
 
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-          
-
-  
+            
+        } else {
+            echo "<h3 style='color:red;'>Invalid email</h3>";
+        }
+    
 
 </body>
 </html>
