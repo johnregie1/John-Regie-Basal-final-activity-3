@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 11 - Self Processing Form</title>
+</head>
+<body>
+
+    <h2>Self-Processing Form</h2>
+
+    <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        Name:
+        <input type="text" name="name">
+        <br><br>
+
+        Email:
+        <input type="text" name="email">
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+
+    
+    <hr>
+
+    <h3>Why is this safer?</h3>
+    <p>
+        Using <b>htmlspecialchars($_SERVER["PHP_SELF"])</b> prevents Cross-Site Scripting (XSS) attacks.
+        It ensures that malicious scripts cannot be injected through the URL or form action.
+        Without it, attackers could manipulate the form action and execute harmful code.
+    </p>
+
+</body>
+</html>
