@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .container {
+            width: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            width: auto;
+        }
+
+        .btn {
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Student Registration Form</h2>
+
+    <form method="POST">
+
+        <!-- Name -->
+        <label>Name:</label>
+        <input type="text" name="name" required>
+
+        <!-- Email -->
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <!-- Gender -->
+        <label>Gender:</label><br>
+
+        <input type="radio" name="gender" value="Male" required>
+        Male
+
+        <input type="radio" name="gender" value="Female">
+        Female
+
+        <br><br>
+
+        <!-- Course -->
+        <label>Course:</label>
+
+        <select name="course" required>
+            <option value="">Select Course</option>
+            <option value="BSIT">BSIT</option>
+            <option value="BSCS">BSCS</option>
+            <option value="BSEd">BSEd</option>
+            <option value="BSBA">BSBA</option>
+        </select>
+
+        <!-- Hobbies -->
+        <label>Hobbies:</label><br>
+
+        <input type="checkbox" name="hobbies[]" value="Reading">
+        Reading
+
+        <input type="checkbox" name="hobbies[]" value="Sports">
+        Sports
+
+        <input type="checkbox" name="hobbies[]" value="Music">
+        Music
+
+        <br><br>
+
+        <!-- Message -->
+        <label>Message:</label>
+
+        <textarea name="message" rows="5" required></textarea>
+
+        <!-- Submit -->
+        <input type="submit" value="Register" class="btn">
+
+    </form>
+
+</div>
+
+</body>
+</html>
