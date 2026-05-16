@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 10 - Combined Form</title>
+</head>
+<body>
+
+    <h2>Combined Form</h2>
+
+    <form method="POST" action="">
+        Name:
+        <input type="text" name="name">
+        <br><br>
+
+        Email:
+        <input type="text" name="email">
+        <br><br>
+
+        Gender:
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <br><br>
+
+        Course:
+        <select name="course">
+            <option value="">-- Select Course --</option>
+            <option value="BSIT">BSIT</option>
+            <option value="BSCS">BSCS</option>
+            <option value="BSEd">BSEd</option>
+            <option value="BSBA">BSBA</option>
+        </select>
+        <br><br>
+
+        Message:
+        <br>
+        <textarea name="message" rows="5" cols="30"></textarea>
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+        // Sanitize inputs
+        $name = htmlspecialchars($_POST["name"]);
+        $email = htmlspecialchars($_POST["email"]);
+        $gender = isset($_POST["gender"]) ? htmlspecialchars($_POST["gender"]) : "";
+        $course = htmlspecialchars($_POST["course"]);
+        $message = htmlspecialchars($_POST["message"]);
+
+        // Validation
+        $errors = [];
+
+        if (empty($name)) {
+            $errors[] = "Name is required";
+        }
+
+        if (empty($email)) {
+            $errors[] = "Email is required";
+        } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $errors[] = "Invalid email format";
+        }
+
+        if (empty($gender)) {
+            $errors[] = "Gender is required";
+        }
+
+        if (empty($course)) {
+            $errors[] = "Course is required";
+        }
+
+        if (empty($message)) {
+            $errors[] = "Message is required";
+        }
+
+    
+    
+
+</body>
+</html>
